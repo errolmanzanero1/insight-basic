@@ -127,7 +127,8 @@ img {
   /* background: var(--dark); */
   position: fixed;
   width: 100%;
-  transform:translateY(5rem)
+  transform:translateY(5rem);
+  z-index:999;
 }
 .header .header__nav ul{
   display: flex;
@@ -400,7 +401,7 @@ img {
   transform:translateY(10rem);
 }
 .contact form{
-  background:var(--light);
+  background:var(--dark);
 padding:3rem;
 display:flex;
 flex-direction:column;
@@ -439,7 +440,7 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rg
 }
 /* FOOTER */
 .footer{
-  background-color:var(--dark);
+  background-color:var(--light);
   padding-top:8rem;
   padding-bottom:2rem;
 }
@@ -473,6 +474,97 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rg
     gap:4rem;
   }
 }
+.bannerE {
+  background-image:url("/img/banner-img (1).png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center; 
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  position:relative;
+}
+.bannerE h1{
+  color: var(--light);
+  font-size:10rem;
+  max-width:80rem;
+  text-align:center;
+  font-weight:100;
+  letter-spacing:3rem;
+}
+.bannerE a{
+  color:var(--primary);
+  font-size:3rem;
+  position:absolute;
+  bottom:3rem;
+}
+
+@media screen and (max-width:500px){
+  .bannerE h1{
+    font-size:5rem;
+  }
+}
+/* PACKAGE */
+.packages{
+  background:var(--dark);
+  position:relative;
+}
+.packages .packages__text{
+  color:var(--light);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:5rem;
+}
+.packages .packages__item{
+  gap:11rem;
+}
+.packages .packages__item a{
+  width:10rem;
+}
+.packages .packages__text h2{
+  color:var(--light); 
+  font-size:10rem;
+  font-weight:100;
+  margin-top:10rem;
+  max-width:70rem;
+}
+.packages .packages__item:first-child{
+  display:flex;
+  flex-direction:row;
+}
+.packages .packages__item:nth-child(2){
+  display:flex;
+  content-content:row-reverse;
+}
+.packages .packages__item a{
+  width:10rem;
+  margin-top: 5rem;
+}
+.packages .packages__item h2{
+  font-size:10;
+  font-weight:100;
+}
+.packages .packages__item:first-child{
+  display:flex;
+  flex-direction:row
+}
+.packages .packages__item:nth-child(2){
+  display:flex;
+  flex-direction:row-reverse;
+}
+.packages .packages__item:last-child{
+  display:flex;
+  flex-direction:row;
+}
+.packages .packages__item li{
+  height:5rem;
+  font-size:3.5rem;
+  font-weight:200;
+}
+
+
 /* REPEATABLE PATTERNS */
 :root {
   --primary: #fb4d3d;
